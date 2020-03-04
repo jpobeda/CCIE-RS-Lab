@@ -14,7 +14,7 @@ class Ospf :
     l = LabConnection() 
     with open('yamlfiles/'+'console.yaml') as f:
         o = yaml.safe_load(f)
-        print "Configuring ospf on all routers"
+        print("Configuring ospf on all routers")
         for router in o["routermapping"]:
             commands = l.render('ospf_init.j2',router+'.yaml')
             threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],commands,router,)))
@@ -28,7 +28,7 @@ class Ospf :
   def remove_ospf(self):
        threads = []
        l = LabConnection()
-       print "Removing ospf from all routers"
+       print("Removing ospf from all routers")
        with open('yamlfiles/' + 'console.yaml') as f:
          o = yaml.safe_load(f)
          for router in o["routermapping"]:
@@ -43,7 +43,7 @@ class Ospf :
        for t in threads:
          t.join()
 
-       print "Removed OSPF from all routers"
+       print("Removed OSPF from all routers")
 
     
 

@@ -13,7 +13,7 @@ class Eigrp :
     l = LabConnection() 
     with open('yamlfiles/'+'console.yaml') as f:
         o = yaml.safe_load(f)
-        print "Configuring EIGRP on all routers"
+        print("Configuring EIGRP on all routers")
         for router in o["routermapping"]:
             commands = l.render('eigrp_init.j2',router+'.yaml')
             threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],commands,router)))
@@ -27,7 +27,7 @@ class Eigrp :
   def remove_eigrp(self):
        threads = []
        l = LabConnection()
-       print "Removing EIGRP from all routers"
+       print("Removing EIGRP from all routers")
        with open('yamlfiles/' + 'console.yaml') as f:
          o = yaml.safe_load(f)
          for router in o["routermapping"]:
@@ -42,6 +42,6 @@ class Eigrp :
        for t in threads:
          t.join()
        
-       print "Removed EIGRP from all routers"
+       print("Removed EIGRP from all routers")
 
 

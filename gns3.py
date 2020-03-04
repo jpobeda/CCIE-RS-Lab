@@ -23,7 +23,7 @@ class Gns3:
     for node in json_output['topology']['nodes']:
             if node['name'] == device:
                 node_id = node['node_id']
-                print "starting ",device
+                print(f"starting {device}")
     response = requests.request("POST",url+"/nodes/"+node_id+"/start")
  def stop(self,device):
 
@@ -37,7 +37,7 @@ class Gns3:
     for node in json_output['topology']['nodes']:
            if node['name'] == device:
                 node_id = node['node_id']
-                print "stopping ", device
+                print(f"stopping {device}")
     response = requests.request("POST",url+"/nodes/"+node_id+"/stop")
 
 
@@ -73,7 +73,7 @@ class Gns3:
          t.join()
 
  def reset_lab(self):
-    print "reseting lab"
+    print("reseting lab")
 
     self.stop_all()
     self.start_all()

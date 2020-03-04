@@ -57,7 +57,7 @@ def init_routers():
    with open("yamlfiles/console.yaml") as f:
         o = yaml.safe_load(f)
         for router in o["routermapping"]:
-            print "initializing", router
+            print(f"initializing {router}")
             commands = l.render('init.j2',router+".yaml")
             threads.append(threading.Thread(target=l.push, args=(o["gns3_vmware_ip"],o["routermapping"][router],commands,router)))
 
@@ -111,7 +111,7 @@ def load(lab,routers):
    threads = []
    with open('yamlfiles/console.yaml') as f:
        o = yaml.safe_load(f)
-       print "loading " + lab
+       print("loading" + lab)
        for router in routers:
         threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],final_commands[router],router))) 
    for t in threads:
@@ -123,7 +123,7 @@ def load(lab,routers):
    send('all',['int Ethernet 0/0','no shut'])
 
 def input_commands():
-    print "Enter/Paste your commands. Ctrl-D to save it."
+    print("Enter/Paste your commands. Ctrl-D to save it.")
     contents = []
     while True:
      try:
@@ -137,7 +137,7 @@ def input_commands():
 
 
 def save_lab():
-    print "Saving lab"
+    print("Saving lab")
 
 
 
@@ -159,9 +159,9 @@ def bgp_topo():
 
 def bgp_path_selection(): 
   b.bgp_topo()
-  print "\n \n \n \n"
-  print "Choose from below for examples"
-  print " 1 - Weight \n 2 - Local_Preference \n 3 - AS_Prepend \n 4 - Origin \n 5 - Med "
+  print("\n \n \n \n")
+  print("Choose from below for examples")
+  print(" 1 - Weight \n 2 - Local_Preference \n 3 - AS_Prepend \n 4 - Origin \n 5 - Med ")
   input = raw_input()
   if input == '1':
       b.best_path_selection_weight()
