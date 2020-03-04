@@ -22,16 +22,16 @@ class LabConnection:
    if type(commands) == list:
      output = netconnect.send_config_set(commands)
      print(f"Pushing commands to {device} \n")
-     print("-------------"+device+"----------------"+device+"----------------"+"--------------"+device+"--------")
+     print(f"-------------{device}----------------{device}------------------------------{device}--------")
      print(output)
-     print("-------------"+device+"----------------"+device+"----------------"+"--------------"+device+"--------")
+     print(f"-------------{device}----------------{device}------------------------------{device}--------")
 
    if type(commands) == str:
     host = netconnect.find_prompt()
     output =   host +  commands + '\n' +  netconnect.send_command(commands) + '\n' + '\n' + '\n'
     border1= '------------'+host+'---------'+host+'-----------------' + host+ '---------------'+host+'---------------------------' + '\n' + '\n' + '\n'
     border2= '------------'+host+'---------'+host+'-----------------' + host+ '---------------'+host+'---------------------------' + '\n' + '\n' + '\n' 
-    print('\n' + '\n' + '\n' + border1 + output + border2)
+    print(f"\n \n \n {border1} {output} {border2}")
       
   def output(self,routers,commands):
      threads = []

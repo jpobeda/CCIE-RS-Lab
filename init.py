@@ -111,7 +111,7 @@ def load(lab,routers):
    threads = []
    with open('yamlfiles/console.yaml') as f:
        o = yaml.safe_load(f)
-       print("loading" + lab)
+       print(f"loading {lab}")
        for router in routers:
         threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],final_commands[router],router))) 
    for t in threads:
