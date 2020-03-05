@@ -41,6 +41,7 @@ def init_L2_switch():
         for j in range(0,4):
             command = ['int Et'+str(i)+'/'+str(j), 'switchport trunk encapsulation dot1q','switchport mode trunk']
             commandset = commandset + command
+            commandset.append('hostname SW01')
 
     with open('yamlfiles/console.yaml') as f:
 

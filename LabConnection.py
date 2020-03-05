@@ -20,6 +20,7 @@ class LabConnection:
    
    netconnect = ConnectHandler(**cisco)
    if type(commands) == list:
+     netconnect.enable() 
      output = netconnect.send_config_set(commands)
      print(f"Pushing commands to {device} \n")
      print(f"-------------{device}----------------{device}------------------------------{device}--------")
@@ -27,6 +28,7 @@ class LabConnection:
      print(f"-------------{device}----------------{device}------------------------------{device}--------")
 
    if type(commands) == str:
+    netconnect.enable()
     host = netconnect.find_prompt()
     output =   host +  commands + '\n' +  netconnect.send_command(commands) + '\n' + '\n' + '\n'
     border1= '------------'+host+'---------'+host+'-----------------' + host+ '---------------'+host+'---------------------------' + '\n' + '\n' + '\n'

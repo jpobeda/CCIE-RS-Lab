@@ -2,10 +2,11 @@
     "auto_close": true,
     "auto_open": false,
     "auto_start": false,
+    "drawing_grid_size": 75,
     "grid_size": 75,
     "name": "Route-Switch",
     "project_id": "44dc856c-9303-4642-8158-3bb8afabd463",
-    "revision": 8,
+    "revision": 9,
     "scene_height": 1000,
     "scene_width": 2000,
     "show_grid": false,
@@ -331,8 +332,10 @@
         "nodes": [
             {
                 "compute_id": "vm",
-                "console": 5000,
+                "console": 5001,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -342,6 +345,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R1",
                 "node_id": "e9e25316-8ad0-411e-b21f-a5af67893680",
                 "node_type": "iou",
@@ -356,9 +360,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": -194,
                 "y": -40,
@@ -366,8 +372,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5001,
+                "console": 5002,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -377,6 +385,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R2",
                 "node_id": "8ddb84c8-154b-4b89-ba4c-073647c5dd44",
                 "node_type": "iou",
@@ -391,9 +400,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": 62,
                 "y": -139,
@@ -401,8 +412,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5002,
+                "console": 5003,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -412,6 +425,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R3",
                 "node_id": "f14e1b73-c2ff-4e80-8bba-2946e7cf5d3f",
                 "node_type": "iou",
@@ -426,9 +440,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": -5,
                 "y": 74,
@@ -436,8 +452,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5003,
+                "console": 5004,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -447,6 +465,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R4",
                 "node_id": "131aa2aa-ed94-44d3-974c-1180a2739ce6",
                 "node_type": "iou",
@@ -461,9 +480,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": -50,
                 "y": -153,
@@ -471,8 +492,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5004,
+                "console": 5005,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -482,6 +505,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R5",
                 "node_id": "19b24a64-dcb1-4647-b754-4a48c9b11cbb",
                 "node_type": "iou",
@@ -496,9 +520,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": -180,
                 "y": 33,
@@ -506,8 +532,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5005,
+                "console": 5006,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -517,6 +545,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R6",
                 "node_id": "1d1e6143-9d37-44af-9007-07c5a1508802",
                 "node_type": "iou",
@@ -531,9 +560,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": -162,
                 "y": -119,
@@ -541,8 +572,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5006,
+                "console": 5007,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -552,6 +585,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R7",
                 "node_id": "20a7cde3-ed6d-43b4-b146-840d22b6acdc",
                 "node_type": "iou",
@@ -566,9 +600,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": 92,
                 "y": 59,
@@ -576,8 +612,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5007,
+                "console": 5008,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -587,6 +625,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R8",
                 "node_id": "a3439fe2-808d-4e3e-baf7-e03669cf443b",
                 "node_type": "iou",
@@ -601,9 +640,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": 123,
                 "y": -2,
@@ -611,8 +652,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5008,
+                "console": 5009,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -622,6 +665,7 @@
                     "x": 22,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R9",
                 "node_id": "684a4aa5-fcdf-47b6-8f11-9ba6b2597858",
                 "node_type": "iou",
@@ -636,9 +680,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": -91,
                 "y": 67,
@@ -646,8 +692,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5009,
+                "console": 5010,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
                 "label": {
@@ -657,6 +705,7 @@
                     "x": 19,
                     "y": -25
                 },
+                "locked": false,
                 "name": "R10",
                 "node_id": "7b3cf432-225d-470d-99ff-9cd796dbdc2b",
                 "node_type": "iou",
@@ -671,9 +720,11 @@
                     "path": "i86bi-linux-l3-adventerprisek9-15.4.2T.bin",
                     "ram": 256,
                     "serial_adapters": 2,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/router.svg",
+                "template_id": null,
                 "width": 66,
                 "x": 117,
                 "y": -70,
@@ -681,8 +732,10 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5010,
+                "console": 5011,
+                "console_auto_start": false,
                 "console_type": "telnet",
+                "custom_adapters": [],
                 "first_port_name": null,
                 "height": 48,
                 "label": {
@@ -692,6 +745,7 @@
                     "x": 15,
                     "y": -25
                 },
+                "locked": false,
                 "name": "L2",
                 "node_id": "3e6070d6-5308-48bc-98bd-ab5577d0ba59",
                 "node_type": "iou",
@@ -706,9 +760,11 @@
                     "path": "i86bi-linux-l2-adventerprisek9-15.2d.bin",
                     "ram": 256,
                     "serial_adapters": 0,
+                    "usage": "",
                     "use_default_iou_values": true
                 },
                 "symbol": ":/symbols/multilayer_switch.svg",
+                "template_id": null,
                 "width": 51,
                 "x": -22,
                 "y": -40,
@@ -718,6 +774,6 @@
     },
     "type": "topology",
     "variables": null,
-    "version": "2.1.21",
-    "zoom": 52
+    "version": "2.2.5",
+    "zoom": 104
 }
