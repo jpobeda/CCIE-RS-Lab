@@ -1,9 +1,9 @@
-from netmiko import ConnectHandler
-from jinja2 import Environment,FileSystemLoader
-import yaml
+#from netmiko import ConnectHandler
+#from jinja2 import Environment,FileSystemLoader
+#import yaml
 from LabConnection import *
-import threading
-from init import *
+#import threading
+#from init import *
 
 class BGP :
 
@@ -27,24 +27,27 @@ class BGP :
     self.bgp_topo()
 
   def remove_bgp(self):
-       threads = []
-       l = LabConnection()
-       print("Removing bgp from all routers")
-       with open('yamlfiles/' + 'console.yaml') as f:
-         o = yaml.safe_load(f)
-         for router in o["routermapping"]:
-            commands = ['no router bgp'] 
-            threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],commands)))
+     threads = []
+     l = LabConnection()
+     print("Removing bgp from all routers")
+     with open('yamlfiles/' + 'console.yaml') as f:
+          o = yaml.safe_load(f)
+          for router in o["routermapping"]:
+               with open('yamlfiles/' + str(router)+ '.yaml' ) as f1: 
+                    r = yaml.safe_load(f1)
+                    commands = ['no router bgp ']
+                    commands[0] = commands[0] + str(r['AS'])
+               threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],commands,router)))
 
 
-       for t in threads:
-         t.start()
+     for t in threads:
+          t.start()
 
 
-       for t in threads:
-         t.join()
+     for t in threads:
+          t.join()
        
-       print("Removed bgp from all routers")
+     print("Removed bgp from all routers")
 
   def bgp_topo(self):
 
