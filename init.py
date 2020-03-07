@@ -159,6 +159,8 @@ def bgp_topo():
   b.bgp_topo()
 
 def bgp_path_selection(): 
+  """ Prints BGP Topology """
+
   b.bgp_topo()
   print("\n \n \n \n")
   print("Choose from below for examples")
