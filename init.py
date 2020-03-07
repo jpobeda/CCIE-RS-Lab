@@ -149,14 +149,14 @@ def lslab(lab=None):
        command = 'ls configs/ine.ccie.rsv5.workbook.initial.configs/advanced.technology.labs | grep ' + lab
    os.system(command)
 
-
 def init_bgp():
   b.init_bgp()
 
+def remove_bgp():
+  b.remove_bgp()
 
 def bgp_topo():
   b.bgp_topo()
-
 
 def bgp_path_selection(): 
   b.bgp_topo()
