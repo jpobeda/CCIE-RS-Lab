@@ -32,7 +32,8 @@ class Eigrp :
          o = yaml.safe_load(f)
          for router in o["routermapping"]:
             commands = ['no router eigrp 100'] 
-            threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],commands)))
+            threads.append(threading.Thread(target=l.push,args=(o["gns3_vmware_ip"],o["routermapping"][router],commands, router)))
+            print(o["routermapping"][router])
 
 
        for t in threads:
